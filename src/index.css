@@ -820,12 +820,6 @@ option {
       align-items: flex-start;
   }
 
-  .Logo {
-      /* width: 50%; */
-      /* height: 45%; */
-      /* display: none; */
-  }
-
   .FirstHeader {
       Font-size: 30px;
       color: #e71111;
