@@ -459,7 +459,8 @@ vertical-align: -0.125em;
   padding: 10px;
   position: absolute;
   right: 10px;
-  transform: translateY(-50%);
+  transform: translateY(-80%);
+  top: 50%;
  }
 
  .SearchButton i {
