@@ -41,8 +41,12 @@ export default function Search() {
         </h1>
         <div className="InputWrapper__Browse">
             <input className="BrowseMovieInput" type="text" placeholder="Search by Title, Year, Genre" />
-            <button className="SearchButton" onclick={Searchmovie}>
-            <FontAwesomeIcon icon={faMagnifyingGlass} className="text-gray-500" style={{ backgroundColor: 'transparent' }} />
+            <button className="SearchButton" onClick={Searchmovie}>
+            <FontAwesomeIcon 
+           icon={faMagnifyingGlass} 
+           className="text-gray-500" 
+        style={{ backgroundColor: 'transparent', fontSize: '20px', color: 'yellow' }} 
+        />  
             </button>
         </div>
     </div>
