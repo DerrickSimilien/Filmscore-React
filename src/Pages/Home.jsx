@@ -1,5 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import Audience from '../assets/Audience.png';
+import Blackfilmscore from '../assets/Blackfilmscore.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 
 
 export default function Home() {
@@ -7,7 +11,7 @@ export default function Home() {
     <div><section id="LandingPage">
     <nav className="NavBar">
       <div className="Logo">
-        <img src={""} alt="Logo" className="Logo" />
+        <img src={Blackfilmscore} alt="Logo" className="Logo" />
       </div>
       <div className="NavBar__Links">
       <Link to="/" className="Home-Active">
@@ -38,19 +42,19 @@ export default function Home() {
         <span className="ChangeColor">The Film Score</span>
       </h2>
       <div className="input-wrapper">
-        <input
+        {/* <input
           type="text"
           placeholder="Search by Genre, Director or Keyword"
           className="InputSearch"
-        />
+        /> */}
        <Link to="/movies">
   <button className="Loading Not-Loading">
     <span className="StreamNow">Stream Now</span>
-    <i className="fa-solid fa-magnifying-glass"></i>
+    <FontAwesomeIcon icon={faMagnifyingGlass} className="text-gray-500" />
   </button>
 </Link>
       </div>
-      <img src={""} alt="Film roll" className="FilmRoll" />
+      <img src={Audience} alt="Film roll" className="FilmRoll" />
     </div>
   </section></div>
   )
