@@ -441,7 +441,7 @@ vertical-align: -0.125em;
   border: 5px solid red !important;
   flex: 1;
   height: 50px;
-  padding: 8px;
+  padding: 10px 40px 10px 10px; 
   border: none;
   outline: 5px solid black;
   font-size: 16px;
@@ -459,6 +459,7 @@ vertical-align: -0.125em;
   padding: 10px;
   position: absolute;
   right: 10px;
+  transform: translateY(-50%);
  }
 
  .SearchButton i {
@@ -482,6 +483,7 @@ vertical-align: -0.125em;
   margin-top: 40px;
   gap: 10px;
   position: relative;
+  margin: 0 auto;
   width: 40%;
   max-width: 600px;
   /* transform: translate(-50%, -50%); */
@@ -558,6 +560,8 @@ vertical-align: -0.125em;
   align-items: center;
   margin-top: 150px;
   justify-content: center;
+  text-align: center;
+  position: relative;
   text-align: center;
   /* margin-top: 20px; */
   /* min-height: 100vh; */
