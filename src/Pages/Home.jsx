@@ -48,9 +48,9 @@ export default function Home() {
           className="InputSearch"
         /> */}
        <Link to="/movies">
-  <button className="Loading Not-Loading">
+  <button className="Loading Not-Loading flex items-center">
     <span className="StreamNow">Stream Now</span>
-    <FontAwesomeIcon icon={faMagnifyingGlass} className="text-gray-500" />
+    <FontAwesomeIcon icon={faMagnifyingGlass} style={{ background: 'transparent' }} className="text-gray-500 ml-7" />
   </button>
 </Link>
       </div>

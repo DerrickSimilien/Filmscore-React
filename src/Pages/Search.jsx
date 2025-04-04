@@ -1,8 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Link as ScrollLink } from 'react-scroll';
+import Blackfilmscore from '../assets/Blackfilmscore.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faMagnifyingGlass, faBars, faSort } from '@fortawesome/free-solid-svg-icons';
 
 export default function Search() {
+    const Searchmovie = () => {
+        console.log('Search movie function triggered');
+      }
+
   return (
     <div><div className="overlay">
     <div className="glowing-divider"></div>
@@ -10,7 +17,7 @@ export default function Search() {
 <section id="LandingPage">
     <nav className="NavBar">
         <div className="Logo">
-            <img src="./assets/Black film score.png" alt="" className="Logo" />
+        <img src={Blackfilmscore} alt="Logo" className="Logo" />
         </div>
         <div className="NavBar__Links">
         <Link to="/" className="Home-Active">Home</Link>
@@ -34,8 +41,8 @@ export default function Search() {
         </h1>
         <div className="InputWrapper__Browse">
             <input className="BrowseMovieInput" type="text" placeholder="Search by Title, Year, Genre" />
-            <button className="SearchButton" onclick="Searchmovie()">
-                <i classMame="fa-solid fa-magnifying-glass"></i>
+            <button className="SearchButton" onclick={Searchmovie}>
+            <FontAwesomeIcon icon={faMagnifyingGlass} className="text-gray-500" style={{ backgroundColor: 'transparent' }} />
             </button>
         </div>
     </div>
