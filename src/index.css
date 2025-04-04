@@ -452,6 +452,12 @@ vertical-align: -0.125em;
   font-style: italic;
  }
 
+ /* .text-gray-500 {
+  margin-left: 20px;
+  transform: translateY(-10%);
+  top: 50%;
+ } */
+
  .SearchButton {
   background: none;
   border: none;
