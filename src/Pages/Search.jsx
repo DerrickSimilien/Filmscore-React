@@ -10,10 +10,12 @@ export default function Search() {
   const [loading, setLoading] = useState(false);
   const [filter, setFilter] = useState('');
   const [input, setInput] = useState('');
+  const [searched, setSearched] = useState(false); // Track if search has been made
 
   const fetchMovies = async (sortOrder) => {
     if (!input) return;
     setLoading(true);
+    setSearched(true); // Mark that a search has been made
     try {
       const response = await fetch(`https://www.omdbapi.com/?apikey=b89bd989&s=${input}`);
       const data = await response.json();
@@ -93,10 +95,16 @@ export default function Search() {
             </button>
           </div>
         </div>
-
-        <section id="SearchResults">
-          <h2 className="SearchResultsTitle">Search results:</h2>
+        {searched && (
+  <section id="SearchResults">
+    {movies.length > 0 && (
+      <h2 className="SearchResultsTitle">Search results:</h2>
+    )}
+    {/* more content */}
+  </section>
+)}
           <div className="filter__selector">
+          
             <h4 className="filter__title">
               Filter <FontAwesomeIcon icon={faSort} style={{ color: '#e3b202' }} />
             </h4>
@@ -107,11 +115,7 @@ export default function Search() {
             </select>
           </div>
 
-          <div className="SortButtonWrapper">
-            <button className="SortButton" onClick={handleSortClick}>
-              Sort
-            </button>
-          </div>
+
 
           <div className="Filter">
             {loading ? (
@@ -124,11 +128,10 @@ export default function Search() {
                   <h5 className="MovieTitle">Year: <span>{movie.Year}</span></h5>
                   <h5 className="MovieTitle">Type: <span>{movie.Type}</span></h5>
                 </div>
-              )) : <p>No movies found!</p>
+              )) : searched && <p>No movies found!</p> // Only show "No movies found!" after search
             )}
           </div>
         </section>
-      </section>
     </div>
   );
 }
