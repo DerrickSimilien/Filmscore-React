@@ -27,6 +27,21 @@
   color: white;
 }
 
+/* App.css */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 250px;
+  background-image: url('./assets/red\ curtains.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.8;
+  z-index: 0; /* Ensure it's at the bottom, but above the background */
+}
+
+
 .App-link {
   color: #61dafb;
 }
@@ -39,3 +54,5 @@
     transform: rotate(360deg);
   }
 }
+
+

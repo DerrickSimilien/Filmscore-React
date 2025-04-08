@@ -52,7 +52,7 @@ export default function Search() {
 
   const handleSortClick = () => {
     const sortedMovies = [...movies].sort((a, b) => {
-      return a.Title.localeCompare(b.Title); // Example sort by title
+      return a.Title.localeCompare(b.Title); 
     });
     setMovies(sortedMovies);
   };
@@ -122,12 +122,13 @@ export default function Search() {
               <div className="LoadingState"><div className="Loading">Loading...</div></div>
             ) : (
               movies.length > 0 ? movies.map((movie) => (
-                <div className="MovieCard" key={movie.imdbID}>
-                  <img src={movie.Poster} alt={movie.Title} />
-                  <h4 className="MovieTitle">{movie.Title}</h4>
-                  <h5 className="MovieTitle">Year: <span>{movie.Year}</span></h5>
-                  <h5 className="MovieTitle">Type: <span>{movie.Type}</span></h5>
-                </div>
+                <Link to={`/movie/${movie.imdbID}`} key={movie.imdbID} className="MovieCard">
+                <img src={movie.Poster} alt={movie.Title} />
+                <h4 className="MovieTitle">{movie.Title}</h4>
+                <h5 className="MovieTitle">Year: <span>{movie.Year}</span></h5>
+                <h5 className="MovieTitle">Type: <span>{movie.Type}</span></h5>
+              </Link>
+
               )) : searched && <p>No movies found!</p> // Only show "No movies found!" after search
             )}
           </div>
