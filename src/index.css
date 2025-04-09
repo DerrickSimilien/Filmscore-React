@@ -494,20 +494,7 @@ vertical-align: -0.125em;
   margin: 0 auto;
   width: 40%;
   max-width: 600px;
-  /* transform: translate(-50%, -50%); */
-  /* background: white; */
-  /* border-radius: 5px; */
-  padding: 5px;
-  /* border: 1px solid #ccc; */
-  /* align-items: center; */
-  /* flex-direction: row; */
-  /* display: inline-block; */
-  /* top: 50%; */
-  /* left: 50%; */
-  /* transform: translate(-50%, -50%);
-  /* max-width: 600px;
-  width: 100%; */
-  /* margin-top: 40px; */ 
+  padding: 5px; 
  }
 
  .InputWrapper__Browse i {
@@ -518,18 +505,17 @@ vertical-align: -0.125em;
   font-size: 20px;
   color: #ccc;
   cursor: pointer;
-  /* background-color: #fff; */
  }
 
  .InputWrapper__Browse input {
   padding: 10px 40px 10px 15px;
   border: 1px solid #ccc;
   font-size: 20px;
-  /* width: 700px; */
   border-radius: 40px;
-  /* align-items: center;
-  display: flex; */
  }
+
+
+
 
  .Search-Wrapper {
   position: absolute;
