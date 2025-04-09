@@ -446,7 +446,7 @@ vertical-align: -0.125em;
   outline: 5px solid black;
   font-size: 16px;
   width: 100%;
-  max-width: none;
+  max-width: 600px;
   margin-bottom: 30px;
   color: #F5D13D;
   font-style: italic;
@@ -466,6 +466,7 @@ vertical-align: -0.125em;
   position: absolute;
   right: 10px;
   transform: translateY(-80%);
+  /* transform: translateX(-5%); */
   top: 50%;
  }
 
@@ -1084,3 +1085,5 @@ option {
   }
 
 }
+
+
