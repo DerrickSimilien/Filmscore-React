@@ -5,12 +5,14 @@ import Blackfilmscore from '../assets/Blackfilmscore.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass, faBars, faSort } from '@fortawesome/free-solid-svg-icons';
 
+
 export default function Search() {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(false);
   const [filter, setFilter] = useState('');
   const [input, setInput] = useState('');
-  const [searched, setSearched] = useState(false); // Track if search has been made
+  const [searched, setSearched] = useState(false);
+  
 
   const fetchMovies = async (sortOrder) => {
     if (!input) return;
@@ -72,14 +74,13 @@ export default function Search() {
           </div>
           <button className="Menu" id="burgerButton">
             <FontAwesomeIcon icon={faBars} />
-          </button>
+          </button>    
           <div className="burger-menu" id="burgerMenu">
             <Link to="/">Home</Link>
             <Link to="/#SearchResults">Search for movie</Link>
             <button className="ContactButton">Contact</button>
-          </div>
+          </div>  
         </nav>
-
         <div className="BrowseInputContainer">
           <h1 className="BrowseClickWatch">Browse. Click. Watch.</h1>
           <div className="InputWrapper__Browse">

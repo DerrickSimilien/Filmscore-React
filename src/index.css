@@ -714,23 +714,26 @@ option {
   position: fixed;
   display: none;
   top: 0;
-  left: -250px; /* Initially hidden off-screen to the left */
-  width: 250px; /* Width of the menu */
-  height: 100%; /* Full screen height */
-  background-color: #333; /* Dark background */
+  left: -250px; 
+  width: 250px; 
+  height: 100%; 
+  background-color: #333; 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px;
-  transition: transform 0.3s ease-in-out; /* Smooth sliding transition */
-  z-index: -1; /* Initially behind other content */
+  transition: transform 0.3s ease-in-out; 
+  z-index: -1; 
 }
 
 .burger-menu.open {
-  transform: translateX(250px); /* Move the menu to the right */
-  z-index: 1000; /* Bring the menu above other content */
+  transform: translateX(250px); 
+  z-index: 1000; 
 }
+
+
+
 
 .burger-menu a, .burger-menu button {
   color: white;
@@ -996,7 +999,6 @@ option {
 
   .SearchButton {
       position: absolute;
-      left: 10px;  /* Align the icon further to the left */
       background: transparent;
       border: none;
       cursor: pointer;
@@ -1004,7 +1006,7 @@ option {
 
   .SearchButton i {
       font-size: 18px;
-      color: #333; /* You can adjust this color */
+      color: #333; 
   }
 
   #burgerButton {
