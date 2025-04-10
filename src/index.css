@@ -223,6 +223,8 @@ body, html {
   transition: transform 0.3s ease-in-out;
 }
 
+
+
 .MobileNav {
   display: none;
   flex-direction: column;
@@ -694,6 +696,10 @@ vertical-align: -0.125em;
   font-size: 24px;
 }
 
+.filter__title {
+  color: rgb(240, 187, 51);
+}
+
 #filter {
   width: 100%;
   max-width: 200px;
@@ -859,6 +865,10 @@ option {
       transition: transform 0.4s ease-in-out;
   }
 
+  .SearchButton {
+    right: -35px;
+  }
+
   .NavBar {
       display: flex;
       flex-direction: column;
@@ -1018,9 +1028,26 @@ option {
       right: 20px;
       z-index: 1000;
   }
+
+  .Filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Centers items horizontally */
+    justify-content: center;  /* Centers items vertically */
+    width: 100%; /* Ensure the container takes up full width */
+    gap: 1rem;
+    padding: 0 10px; /* Adds some padding to prevent content from touching the sides */
+  }
+
+  .MovieCard {
+    width: 100%; /* Ensure the card takes full width of the container */
+    max-width: 300px; /* Optional: limits card width */
+    margin: 0 auto; /* Centers the card horizontally */
+  }
+
+  
+
 }
-
-
 
 
 
