@@ -120,7 +120,8 @@ export default function Search() {
 
         <div className="Filter">
           {loading ? (
-            <div className="LoadingState"><div className="Loading">Loading...</div></div>
+            <div className="LoadingState">  <div className="neon-spinner"></div>
+    <div className="searching-text" style={{ marginTop: '1.5rem' }}>Searching...</div></div>
           ) : (
             movies.length > 0 ? movies.map((movie) => (
               <Link to={`/movie/${movie.imdbID}`} key={movie.imdbID} className="MovieCard">
