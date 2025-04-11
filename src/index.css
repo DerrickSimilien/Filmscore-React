@@ -964,12 +964,10 @@ option {
   }
 
   .Loading {
-      /* width: 500px; */
-      width: 300px; /* Button will take 80% of the container width */
-      font-size: 25px; /* Make font size bigger on smaller screens */
-      padding: 20px;
-      margin: 0;
-  }
+    width: auto; /* Let the button auto-adjust based on content */
+    padding: 12px 25px; /* Add padding for better appearance */
+    font-size: 20px; /* Adjust font size for mobile */
+}
 
   .Loading:hover {
       box-shadow: 0 0 15px 15px rgba(255, 99, 71, 0.8); /* Glowing red effect */
@@ -995,9 +993,16 @@ option {
 
 
   .StreamNow {
-      font-size: 30px;
-      letter-spacing: 3px;
-  }
+    font-size: 20px; /* Adjust font size for mobile */
+    letter-spacing: 1px; /* Decrease letter-spacing for mobile */
+    text-align: center; /* Ensure text is centered */
+    padding: 10px 20px; /* Add some padding to the button to make it more clickable */
+    width: auto; /* Allow button width to adjust based on content */
+    max-width: 80%; /* Ensure button doesn't exceed 80% of the screen */
+    margin: 0 auto; /* Center the button horizontally */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
 
   .Menu {
       /* display: block;  */
