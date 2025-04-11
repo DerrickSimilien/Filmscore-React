@@ -16,7 +16,7 @@
   align-items: center;
   z-index: 0;
   overflow: hidden;
-  background-color: #000; /* 👈 ADD THIS LINE */
+  background-color: #000; 
 }
 
 

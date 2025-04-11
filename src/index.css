@@ -1104,9 +1104,9 @@ option {
     padding: 0 10px; /* Adds some padding to prevent content from touching the sides */
   }
 
-  .MovieCard {
-    width: 100%; /* Ensure the card takes full width of the container */
-    max-width: 300px; /* Optional: limits card width */
+  .MovieCard img {
+    width: 35vw; /* Ensure the card takes full width of the container */
+    max-width: none; /* Optional: limits card width */
     margin: 0 auto; /* Centers the card horizontally */
   }
 
@@ -1119,51 +1119,101 @@ option {
 
 
 @media screen and (max-width: 768px) {
+  /* LEAVE NAV + SEARCH AS IS */
 
-  /* .NavBar a {
-      padding: 0 10px;
-  } */
- 
-  .NavBar {
-      display: flex;
-      gap: 20px;
+  /* STACK FILTER + MOVIE CARDS */
+  .FirstContainer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 20px 10px;
   }
 
-  .NavBar__Links {
-      align-items: center;
-      width: 80%;
+  .Filter {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+    padding: 0 10px;
   }
 
   .MovieCard {
-    width: 150px; /* Smaller width for mobile devices */
+    display: flex;
+    flex-direction: column; /* Stack vertically */
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
   }
 
-  .NavBar__Links a {
-      color: #F5D13D;
+
+  .MovieCard img {
+    width: 90vw;
+    max-width: 300px;
+    height: auto;
+    border-radius: 12px;
   }
 
+  .MovieInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .MovieInfo h3, 
+  .MovieInfo p {
+    margin: 0;
+    font-size: 16px;
+  }
+
+  /* HEADINGS */
+  .FirstHeader {
+    font-size: 32px;
+    text-align: center;
+    color: #e71111;
+  }
+
+  .Header2 {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .StreamNow {
+    font-size: 28px;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+
+  /* OTHER ELEMENTS */
   .Loading {
-      width: 500px;
-      /* align-items: center; */
+    width: 90%;
+    font-size: 24px;
+    text-align: center;
+    padding: 15px;
+    margin: auto;
   }
 
   .input-wrapper {
-      width: 90%;
+    width: 90%; /* okay to keep if unrelated to search input layout */
   }
 
-  .FirstHeader {
-      color: #e71111;
+  /* OPTIONAL: maintain your NavBar tweaks if these aren't causing issues */
+  .NavBar {
+    display: flex;
+    gap: 20px;
   }
-  
-}
 
-@media screen and (max-width: 1024px) {
+  .NavBar__Links {
+    align-items: center;
+    width: 80%;
+  }
 
   .NavBar__Links a {
-      padding: 5px 30px;
-      /* font-weight: 600; */
+    color: #F5D13D;
   }
 
 }
-
 
